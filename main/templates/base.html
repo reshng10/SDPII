@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="static/css/bootstrap.min.css">
+   <link rel="stylesheet" href="static/css/font-awesome.min.css">
+   <link rel="stylesheet" href="static/css/animate.min.css">
+   <link rel="stylesheet" href="static/css/et-line-font.css">
+   <link rel="stylesheet" href="static/css/nivo-lightbox.css">
+   <link rel="stylesheet" href="static/css/nivo_themes/default/default.css">
+   <link rel="stylesheet" href="static/css/style.css">
+   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <title>Zəngin dil</title>
+</head>
+
+<body>
+  <style>
+
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  td{
+    width: auto;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  table {
+    border: 1px solid gray;
+  font-family: times, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body {
+  /* Set the Serial counter to 0 */
+  counter-reset: Serial;
+}
+tr td:first-child:before {
+    /* Increment the Serial counter */
+    counter-increment: Serial;
+
+    /* Display the counter */
+    content: "" counter(Serial);
+}
+  </style>
+  <!-- navigation section -->
+  <section class="navbar navbar-fixed-top custom-navbar" role="navigation">
+  	<div class="container">
+  		<div class="navbar-header">
+  			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+  				<span class="icon icon-bar"></span>
+  				<span class="icon icon-bar"></span>
+  				<span class="icon icon-bar"></span>
+  			</button>
+  			<a class="navbar-brand" rel="home" href="#" id = "logo" title="Team Logo">
+  				<img style="max-width:100px; margin-top: -7px;"
+  					 src="static/images/logo.png" id="logo">
+              </a>
+
+  		</div>
+  		<div class="collapse navbar-collapse">
+  			<ul class="nav navbar-nav navbar-right">
+                      <li><a href="../work" class="smoothScroll" style="color: #000;">Haqqımızda</a></li>
+                      <li><a href="/metn" class="smoothScroll" style="color: #000;">Mətnin lemmalaşdırılması</a></li>
+                      <li><a href="/morfoloji" class="smoothScroll" style="color: #000;">Morfoloji analiz</a></li>
+                      <li><a href="/yarat" class="smoothScroll" style="color: #000;">Sözlərin generasiyası</a></li>
+                      <li><a href="../luget" class="smoothScroll" style="color: #000;">Lügət</a></li>
+                      <li><a href="/haqqimizda" class="smoothScroll" style="color: #000;">Tərəfdaşlar</a></li>
+                      <li><a href="../" class="smoothScroll" style="color: #000;">Ana Səhifə</a></li>
+
+  			</ul>
+  		</div>
+  	</div>
+  </section>
+    <br />
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/smoothscroll.js"></script>
+    <script src="static/js/isotope.js"></script>
+    <script src="static/js/imagesloaded.min.js"></script>
+    <script src="static/js/nivo-lightbox.min.js"></script>
+    <script src="static/js/jquery.backstretch.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/custom.js"></script>
+
+    <footer>
+
+            <div class="container">
+              <div class="column">
+                  <div class="col-md-12 col-sm-12">
+                      <p>Copyright:<a href="https://www.facebook.com/joooonni" target="_parent">Jalal Rasulzade</a></p>
+                      <hr>
+                      <ul class="social-icon">
+                          <li><a href="https://www.facebook.com/joooonni" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+                          <li><a href="https://www.linkedin.com/in/jalal-rasulzada-ab5075144/" class="fa fa-linkedin wow fadeIn" data-wow-delay="0.9s"></a></li>
+                      </ul>
+                  </div>
+                    <div class="col-md-12 col-sm-12">
+                        <p>Copyright:<a href="http://www.facebook.com/nijatmursali" target="_parent">Nijat Mursali</a></p>
+                        <hr>
+                        <ul class="social-icon">
+                            <li><a href="http://www.facebook.com/nijatmursali" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+                            <li><a href="http://www.twitter.com/nijatmursali" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+                            <li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+                            <li><a href="http://www.behance.com/nijatmursali" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+                            <li><a href="http://www.linkedin.com/nijatmursali" class="fa fa-linkedin wow fadeIn" data-wow-delay="0.9s"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

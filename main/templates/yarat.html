@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+
+    @media only screen and (max-width: 850px) {
+      #logo {
+          width: 80px;
+      }
+    }
+    #logo {
+        margin-top:-10px;
+    }
+    html {
+        display: flex;
+        color: #fff;
+        text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.3);
+
+    }
+    </style>
+
+
+<br>
+<br>
+<br>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+
+</script>
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <h3>Sözün analizi <p3>
+                <a href="#" class="popping" style="font-size: 20px;border-radius: 10px; background: #000; color: #fff; padding-left:5px; padding-right: 5px; width: 30px;height: 30px; "
+                 title="Alqoritm ilə bağlı info" data-toggle="popover" data-trigger="focus" data-content="Misal olaraq məsələn 'qələm' olaraq əlavə edərək bütün mümkün formaları tapa bilərsiniz. "> ?</a></p3></h3>
+    <form class="form-group" role="form" action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+
+        <button type="submit" class="btn btn-outline-secondary" name='action' value='soz'>Göndər</button>
+    </form>
+</div>
+</div>
+
+
+<style>
+
+body {
+    background-color: #f9f9f9;
+}
+
+@media (max-width:767px) {
+
+  #header3 {
+    font-size: 15px;
+
+  }
+
+}
+
+
+</style>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+
+                    <div class="list-group">
+                    <p1 class="list-group-item">Sözün başlanğıc forması: <strong> {{pho}} </strong></p1>
+
+                    <hr>
+                </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <div>
+    <table>
+      
+      {% for k in data %}
+          <tr><td>{{id}}</td>
+            <td style="border: 1px solid #dddddd; text-align: left;padding: 8px;">{{k.ozu}}</td>
+        {% for kk in k.shekilciler %}
+            <td >{{kk.adi}}</td>
+        {% endfor %}
+          </tr>
+      {% endfor %}
+    </table>
+</div>
+
+
+<hr>
+
+
+
+{% endblock %}

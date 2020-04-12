@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+
+@media only screen and (max-width: 850px) {
+      #logo {
+          width: 80px;
+      }
+    }
+    #logo {
+        margin-top:-10px;
+    }
+
+    </style>
+
+
+<br>
+<br>
+<br>
+
+<section>
+
+
+
+    <aside>
+        <div class="container">
+            <div class="row">
+                <h3>Login form</h3>
+            <form class="form-group" role="form" action="" method="post">
+            {% csrf_token %}
+            {{ UserLoginForm|crispy }}
+
+        </form>
+
+                    <!--LABELI bura daxil edersen-->
+                  </div>
+
+                </div>
+
+
+
+    </aside>
+
+
+</section>
+
+<hr>
+
+
+
+{% endblock %}

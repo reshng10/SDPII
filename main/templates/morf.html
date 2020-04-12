@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+
+    @media only screen and (max-width: 850px) {
+      #logo {
+          width: 80px;
+      }
+    }
+    #logo {
+        margin-top:-10px;
+    }
+    html {
+        display: flex;
+        color: #fff;
+        text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.3);
+
+    }
+    </style>
+
+
+<br>
+<br>
+<br>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+
+</script>
+<section>
+
+        <div class="container">
+            <div class="row">
+
+                <form class="form-group" role="form" action="" method="post">
+                    {% csrf_token %}
+                    {{ morf|crispy }}
+                            <button type="submit" class="btn btn-outline-secondary" name='action' value='morf'>Göndər</button>
+                            <hr>
+                            <div class="list-group" >
+                                <br>
+                                {%for ok in morf_t%}
+                                <p1 class="list-group-item" style="font-size: 20px;">{{ok}}</p1>
+                                {%endfor%}
+                                <hr>
+                                </div>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+
+<hr>
+
+
+
+{% endblock %}
